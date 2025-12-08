@@ -1,0 +1,26 @@
+# ==========================
+# Angular (web-ui)
+# ==========================
+web-ui/node_modules/
+web-ui/dist/
+web-ui/.angular/
+
+# ==========================
+# Spring Boot (backend)
+# ==========================
+backend/target/
+
+# ==========================
+# IDE / Editor
+# ==========================
+*.iml
+.idea/
+.classpath
+.project
+.settings/
+
+# ==========================
+# OS
+# ==========================
+.DS_Store
+Thumbs.db

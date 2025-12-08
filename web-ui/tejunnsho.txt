@@ -1,0 +1,20 @@
+1．spring boot(java)を使わない、ログイン疑似認証、ダッシュボード表示
+2. 1ができたら、spring boot(java)を使うバージョンにアップグレード 
+3. 2ができたら、Cognitoを使って本格的ログイン認証を実装
+
+前提
+1. Node.js インストール
+
+2. Angular CLI インストール
+npm install -g @angular/cli
+
+3. 再起動
+
+4. Angularプロジェクト作成
+ng new web-ui
+Add routing? → Yes
+Stylesheet format? → CSS
+
+5. コンポーネント作成
+ng generate component pages/login
+ng generate component pages/dashboard
