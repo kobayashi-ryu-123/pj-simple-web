@@ -1,0 +1,29 @@
+#map {
+  height: 500px;
+}
+
+.info-panel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 260px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.page-info {
+  font-weight: bold;
+}
+
+.close {
+  width: 100%;
+}
