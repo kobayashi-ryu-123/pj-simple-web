@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,19 +8,22 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
 
   userName = 'user';
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      this.userName = params['user'] || 'user';
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      this.route.queryParams.subscribe(params => {
+        this.userName = params['user'] || 'user';
+      });
+    }
   }
 
   logout() {
